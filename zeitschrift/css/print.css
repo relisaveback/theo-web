@@ -1,0 +1,271 @@
+/* Projekt: www.theo-web.de / www.afrp.de
+	(c) Claus Coviello, www.webseiten-mit-sinn.de
+	Drucklayout, revision 1.0, version 01
+	letzte Aenderung: 15.09.2006
+*/
+
+
+body {
+	margin:0;
+	padding:0;
+	border:0;
+	color:black;
+	font:normal 80%/1.25em Arial, Helvetica, sans-serif;
+}
+
+#background {
+	display:none;
+}
+
+#header {
+	margin-bottom:10px;
+	border-bottom:1px solid #555;
+}
+
+#layout-left {
+	display:none;
+}
+
+
+/*
+ * Allgemeine Basiseinstellungen
+ * */
+img {
+	margin:0;
+	padding:0;
+	border:0;
+}
+
+strong {
+	font-weight:bold;
+ 	color:#404040;
+}
+
+.skip {
+	display:none;
+}
+
+.anmerkung-programmierer,
+.kommentar-programmierer {
+	color:red;
+	font-weight:normal;
+	font-size:0.9em;
+}
+
+.spaltenabschluss {
+	display:block;
+	height:1px;
+	font:1px /1 sans-serif;
+	clear:both;
+}
+
+
+
+/*
+ * Kopfbereich des Layouts
+ * */
+#header #logo-theo-web {
+	display:none;
+}
+
+#header #zeitschrift-fuer {
+	margin:0 0 0.4em 0;
+	padding:0;
+	font-size:1.5em;
+	font-weight:bold;
+	color:#444;
+}
+
+#header #logo-afrp {
+	margin:0 0 0.4em 0;
+	padding:0;
+	font-size:1.5em;
+	font-weight:bold;
+}
+
+#header #logo-afrp a {
+	color:#444;
+	text-decoration:none;
+}
+
+
+
+/*
+ * Textformatierungen im Content-Bereich
+ * */
+#layout-center a {
+	color:#404040;
+	text-decoration:underline;
+}
+
+#layout-center h1,
+#layout-center .h1-layout {
+	margin:30px 0 0.4em 0;
+	padding:0;
+	color:#103174;
+	font-size:1.3em;
+	line-height:1.25em;
+	font-weight:bold;
+}
+
+#layout-center h2,
+#layout-center h3,
+#layout-center h4 {
+	margin:2em 0 0.6em 0;
+	padding:0;
+	color:#404040;
+	font-size:1em;
+	line-height:1.25em;
+	font-weight:bold;
+}
+
+#layout-center h2 span,
+#layout-center h3 span,
+#layout-center h4 span {
+	font-weight:normal;
+}
+
+#layout-center p {
+	margin:0 0 0.8em 8px;
+	padding:0;
+}
+
+#layout-center hr {
+	margin:30px 0 8px 10px;
+	padding:0;
+	border:0;
+	border-top:1px solid #B2B2B2;
+
+}
+
+#layout-center h2 a,
+#layout-center h3 a,
+#layout-center h4 a {
+	text-decoration:none;
+}
+
+#layout-center h2 a span,
+#layout-center h3 a span,
+#layout-center h4 a span {
+	font-weight:normal;
+	text-decoration:underline;
+}
+
+
+
+/*
+ * einfache Aufzaehlungsliste
+ * */
+#layout-center ul {
+	margin:1em 0 0.8em 5px;
+	padding:0;
+	list-style-type:square;
+}
+
+#layout-center ol {
+	/* 
+		Standardwert fuer alle Browser
+	*/
+	margin:1em 0 0.8em 8px !important;
+	/*
+		Wert fuer den IE
+	*/	margin-left:14px;
+	padding:0;
+}
+
+#layout-center ol.roemisch {
+	list-style-type:upper-roman;
+}
+
+#layout-center li {
+	margin:0 0 0.6em 20px;
+	padding:0;
+}
+
+#layout-center ul li {
+	color:#7E84E3;
+}
+
+#layout-center li h2,
+#layout-center li h3,
+#layout-center li h4 {
+	margin:0;
+	padding:0;
+	color:#404040;
+}
+
+#layout-center li p,
+#layout-center li span {
+	margin:0;
+	padding:0;
+	color:black;
+}
+
+
+
+/*
+ * Downloadliste fuer PDF-Dokumente
+ * */
+#layout-center .download-pdf {
+	position:relative;
+	width:100%;
+	margin:4px 0 4px 5px;
+	padding:0;
+}
+
+#layout-center .download-pdf .spalte-rechts {
+	min-height:45px;
+	margin-left:105px;
+}
+
+#layout-center .download-pdf .mindesthoehe {
+	float:right;
+	width:1px;
+	height:45px;
+}
+
+#layout-center .download-pdf .spalte-links {
+	position:absolute;
+	top:0;
+}
+
+#layout-center .download-pdf .spalte-links div {
+	float:left;
+	width:90px;
+	margin-left:5px;
+	font-size:0.85em;
+}
+
+#layout-center .download-pdf .spalte-links img {
+	float:left;
+	margin-right:4px;
+}
+
+#layout-center .download-pdf .spalte-links a { 
+	text-decoration:none;
+}
+
+#layout-center .download-pdf .spalte-links a:hover { 
+	text-decoration:underline;
+}
+
+#layout-center .download-pdf p {
+	/*
+		IE-bugfix: Um einen Ueberlauf nach rechts zu vermeiden, 
+		wird der rechte Rand ueber den p-tag definiert.
+	*/
+	margin:0 2em 0 0;
+	padding:0;
+}
+
+
+/*
+ * Liste mit externen Links
+ * */
+#layout-center .bulletliste {
+	list-style-type:disc;
+}
+
+#layout-center .bulletliste li {
+	color:black;
+}

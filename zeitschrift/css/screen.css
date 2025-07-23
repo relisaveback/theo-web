@@ -1,0 +1,474 @@
+﻿/* Projekt: www.theo-web.de / www.afrp.de
+	(c) Claus Coviello, www.webseiten-mit-sinn.de
+	Screenlayout, revision 1.0, version 01
+	letzte Aenderung: 15.09.2006
+*/
+
+
+/*
+ * Aufbau Grundlayout
+ * */
+html, body {
+	height:100%;
+}
+
+body {
+	height:100%;
+	margin:0;
+	padding:0;
+	border:0;
+	color:black;
+	/*
+		IE-Fehler: Die Schriftgroesse muss in Prozent angegeben werden.
+		Mit em kann es im IE (5.0, 5.5, 6.0, 7beta) Probleme geben.
+		Bei Aenderung der Schriftgroesse im Browser verschiebt sich der
+		Text in der linken Spalte des 3-spaltigen Layouts.
+	*/
+	font:normal 80%/1.25em Arial, Helvetica, sans-serif;
+	background-color:white;
+	/*
+		bugfix IE 5 und 5.5
+	*/	text-align: center;
+}
+
+#background {
+	height:100%;
+	margin:12px auto 0;
+	padding:0 1px 1px 0;
+	overflow:hidden;
+	/*
+		bugfix NN 7: Wenn das Fenster schmaler als das Layout ist,
+		verschwindet die linke Spalte.
+	*/	border-left:1px solid white;
+	/*
+		bugfix
+		Wert fuer IE 5.x
+	*/	width:752px;
+		voice-family: "\"}\"";
+		voice-family: inherit;
+	/*
+		Wert fuer alle anderen Browser + bugfix
+	*/	width:772px;
+		} .empty {
+}
+
+#background .subdiv {
+	height:100%;
+	width:auto;
+	padding:0 10px;
+	border-left:1px solid #BDBDBD;
+	border-right:1px solid #BDBDBD;
+}
+
+#background .outer-container {
+	height:100%;
+}
+
+#wrapper {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+}
+
+#wrapper-sub {
+	width:750px;
+	margin:12px auto 0;
+	padding:0 10px;
+	text-align:left;
+	border-left:1px solid #BDBDBD;
+	border-right:1px solid #BDBDBD;
+}
+
+#header {
+	position:relative;
+	height:90px;
+	background-color:#103174;
+}
+
+.outer-container {
+	width:auto;
+	border-left:143px solid #E5E5E5;
+}
+
+#inner-container {
+	margin:0;
+	width:100%;
+}
+
+#layout-left {
+	z-index:10;
+	position:relative;
+	float:left;
+	width:143px;
+	margin-left:-143px;
+	margin-right:1px;
+	overflow:hidden;
+}
+
+#layout-center {
+	z-index:12;
+	position:relative;
+	float:left;
+	width:100%;
+	margin:0 -8px 0 -2px;
+	overflow:hidden;
+}
+
+.outer-container > #inner-container {
+	/*
+		Die Farbe dieser Linie ist an das Layout anzupassen.
+		"transparent" funktioniert nicht im IE 7beta.
+	*/
+	border-bottom:1px solid white;
+}
+
+
+
+/*
+ * Allgemeine Basiseinstellungen
+ * */
+img {
+	margin:0;
+	padding:0;
+	border:0;
+}
+
+strong {
+	font-weight:bold;
+ 	color:#404040;
+}
+
+.skip, .print-only {
+	display:none;
+}
+
+.anmerkung-programmierer,
+.kommentar-programmierer {
+	color:red;
+	font-weight:normal;
+	font-size:0.9em;
+}
+
+.spaltenabschluss {
+	display:block;
+	height:1px;
+	font:1px /1 sans-serif;
+	clear: both;
+}
+
+
+
+/*
+ * Theo-Web-Kopfbereich des Layouts
+ * */
+#header #logo-theo-web {
+	position:absolute;
+	top:8px;
+	right:60px;
+}
+
+#header #zeitschrift-fuer {
+	position:absolute;
+	top:32px;
+	left:13px;
+	width:350px;
+	height:50px;
+	margin:0;
+	padding:0;
+	background:url("../img/text_zeitschrift-fuer.gif") no-repeat top left;
+}
+
+#header #zeitschrift-fuer span {
+	display:none;
+}
+
+
+
+/*
+ * AfRP-Kopfbereich des Layouts
+ * */
+#header #logo-afrp {
+	position:absolute;
+	top:46px;
+	left:8px;
+	display:block;
+	width:373px;
+	height:38px;
+	margin:0;
+	padding:0;
+}
+
+#header #logo-afrp a {
+	display:block;
+	width:373px;
+	height:38px;
+	margin:0;
+	padding:0;
+	background:url("../404/index.html") no-repeat top left;
+}
+
+#header #logo-afrp a span {
+	display:none;
+}
+
+
+/*
+ * Aufbau Hauptmenue
+ * */
+#layout-left ul {
+	display:block;
+	width:100%;
+	margin:0 0 15px;
+	padding:50px 4px 40px 0;
+	list-style-type:none;
+	border-top:2px solid white;
+	border-bottom:2px solid white;
+	background-color:#F2F2F2;
+}
+
+#layout-left li {
+	display:block;
+	margin:0 0 2px;
+	padding:0;
+	font-size:1.2em;
+	line-height:1.1em;
+	border-top:2px solid #F2F2F2;
+}
+
+#layout-left li a {
+	display:block;
+	width:100%;
+	padding:0;
+	text-decoration:none;
+	color:#343434;
+	font-weight:normal;
+	border-top:1px solid #F2F2F2;
+	/*
+		IE-bugfix, damit die volle Menuebreite als link aktiviert ist.
+	*/	background-color:#F2F2F2; }
+	/*
+		Wozu dieser Eintrag notwendig ist, liess sich noch nicht klaeren.
+	*/	hmtl>body #layout-left li a {
+		width:auto;
+}
+
+#layout-left li a span {
+	display:block;
+	padding:2px 0 1px 0.5em;
+	letter-spacing:1px;
+}
+
+#layout-left li a:hover,
+#layout-left li a.menue-aktiv {
+	color:#103174;
+	font-weight:bold;
+	background-color:#E5E5E5;
+}
+
+#layout-left li a.menue-aktiv {
+	border-top:1px solid #B2B2B2;
+}
+
+
+/*
+ * Textblock unter dem Hauptmenue
+ * */
+#layout-left p {
+	margin:0.7em 5px 0.7em 6px;
+	padding:0;
+}
+
+
+/*
+ * Textformatierungen im Content-Bereich
+ * */
+#layout-center a {
+	color:#404040;
+	text-decoration:underline;
+}
+
+#layout-center h1,
+#layout-center .h1-layout {
+	margin:30px 0 0.4em 20px;
+	padding:2px 5px 1px 9px;
+	color:#103174;
+	font-size:1.3em;
+	line-height:1.25em;
+	font-weight:bold;
+	border-bottom:1px solid #B2B2B2;
+	border-right:1px solid #B2B2B2;
+	background-color:#F2F2F2;
+}
+
+#layout-center h2,
+#layout-center h3,
+#layout-center h4 {
+	margin:2.0em 0 0.6em 20px;
+	padding:0;
+	color:#404040;
+	font-size:1em;
+	line-height:1.25em;
+	font-weight:bold;
+}
+
+#layout-center h2 span,
+#layout-center h3 span,
+#layout-center h4 span {
+	/* neuer Eintrag */
+	font-weight:normal;
+}
+
+#layout-center p {
+	margin:0 8px 0.8em 28px;
+	padding:0;
+}
+
+#layout-center hr {
+	margin:30px 12px 8px 30px;
+	padding:0;
+	border:0;
+	border-top:1px solid #B2B2B2;
+
+}
+
+#layout-center h2 a,
+#layout-center h3 a,
+#layout-center h4 a {
+	text-decoration:none;
+}
+
+#layout-center h2 a span,
+#layout-center h3 a span,
+#layout-center h4 a span {
+	font-weight:normal;
+	text-decoration:underline;
+}
+
+#layout-center h2 a:hover,
+#layout-center h3 a:hover,
+#layout-center h4 a:hover {
+	text-decoration:underline;
+}
+
+
+/*
+ * einfache Aufzaehlungsliste
+ * */
+#layout-center ul {
+	margin:1em 8px 0.8em 25px;
+	padding:0;
+	list-style-type:square;
+}
+
+#layout-center ol {
+	/*
+		Standardwert fuer alle Browser
+	*/
+	margin:1em 8px 0.8em 28px !important;
+	/*
+		Wert fuer den IE
+	*/	margin-left:34px;
+	padding:0;
+}
+
+#layout-center ol.roemisch {
+	list-style-type:upper-roman;
+}
+
+#layout-center li {
+	margin:0 0 0.6em 20px;
+	padding:0;
+}
+
+#layout-center ul li {
+	color:#7E84E3;
+}
+
+#layout-center li h2,
+#layout-center li h3,
+#layout-center li h4 {
+	margin:0;
+	padding:0;
+	color:#404040;
+}
+
+#layout-center li p,
+#layout-center li span {
+	margin:0;
+	padding:0;
+	color:black;
+}
+
+
+
+/*
+ * Downloadliste fuer PDF-Dokumente
+ * */
+#layout-center .download-pdf {
+	position:relative;
+	width:100%;
+ 	margin:4px 0 4px 25px;
+	padding:0;
+}
+
+#layout-center .download-pdf .spalte-rechts {
+	min-height:45px;
+	margin-left:105px;
+}
+
+#layout-center .download-pdf .mindesthoehe {
+	float:right;
+	width:1px;
+	height:45px;
+}
+
+#layout-center .download-pdf .spalte-links {
+	position:absolute;
+	top:0;
+}
+
+#layout-center .download-pdf .spalte-links div {
+	float:left;
+	width:90px;
+	margin-left:5px;
+	font-size:0.85em;
+}
+
+#layout-center .download-pdf .spalte-links img {
+	float:left;
+	margin-right:4px;
+}
+
+#layout-center .download-pdf .spalte-links a {
+	text-decoration:none;
+}
+
+#layout-center .download-pdf .spalte-links a:hover {
+	text-decoration:underline;
+}
+
+#layout-center .download-pdf p {
+	/*
+		IE-bugfix: Um einen Ueberlauf nach rechts zu vermeiden,
+		wird der rechte Rand ueber den p-tag definiert.
+	*/
+	margin:0 2em 0 0;
+	padding:0;
+}
+
+
+/*
+ * Liste mit externen Links
+ * */
+#layout-center .bulletliste {
+	list-style-type:none;
+}
+
+#layout-center .bulletliste li {
+	position:relative;
+	margin-left:0;
+	margin-bottom:0.4em;
+	padding-left:25px;
+	background:url("../img/listenzeichen-bullet.gif") no-repeat 0 0.35em;
+}
